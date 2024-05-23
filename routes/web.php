@@ -17,4 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+route ::get('/songs', [App\Http\Controllers\SongController::class, 'index'])->name('songs');
+route ::get('/playlists', [App\Http\Controllers\PlaylistController::class, 'index'])->name('playlists');
+
+//route ::get('/mail', [App\|Http\Controllers\MailController::class, 'Send'])->name('mail.send//');
+
 require __DIR__.'/auth.php';
