@@ -13,9 +13,11 @@
                     <ul>
                         @foreach ($playlists as $playlist)
                             <li>{{ $playlist['id']}} {{ $playlist['naam']}}</li>
-                            {{$playlist['id'] + 1}} {{$playlist['naam']}}
- 
-                            
+                            <ul>
+                            @foreach ($playlist->Songs as $song)
+                                <li>- {{ $song->name }}</li>
+                            @endforeach
+                            </ul>
                         @endforeach
                     </ul>
                 </div>

@@ -16,5 +16,13 @@ class PlaylistSeeder extends Seeder
             DB::table('playlists')->insert([
                 "naam" =>"playlist1",
             ]);
+            DB::table('playlist_song')->insert([
+                "playlist_id" =>1,
+                "song_id" =>1,
+            ]);
+            DB::table('playlist_song')->insert([
+                "playlist_id" =>1,
+                "song_id" =>2,
+            ]);
     }
 }

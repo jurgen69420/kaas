@@ -11,6 +11,19 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// als laravel een nieuwe route niet direct kan vinden, 
+// ververs dan de route cache met > php artisan route:cache 
+// en probeer het nog eens
+Route::get('/artists', [App\Http\Controllers\ArtistController::class, 'index'])->name('artists');
+//Route::get('/artists', function () {
+    //return view('artists/index');
+    
+//})->name("artists");
+
+
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
