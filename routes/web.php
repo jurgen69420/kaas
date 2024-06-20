@@ -32,6 +32,18 @@ Route::middleware('auth')->group(function () {
 
 route ::get('/songs', [App\Http\Controllers\SongController::class, 'index'])->name('songs');
 route ::get('/playlists', [App\Http\Controllers\PlaylistController::class, 'index'])->name('playlists');
+Route::get('/session/add/{song_id}', function($song_id) {
+
+    $items = Array();     //  [1, 4, 6]
+    if (! Session::exists('playlist')) {
+        Session::put('playlist', $items);
+    } else {
+        $items = Session::get('playlist');
+    }
+    array_push($items, $song_id);
+    Session::put('playlist', $items);
+    Session::save();
+});
 
 //route ::get('/mail', [App\|Http\Controllers\MailController::class, 'Send'])->name('mail.send//');
 

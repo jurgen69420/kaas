@@ -17,23 +17,44 @@ class Songseeder extends Seeder
     {
         DB::table('songs')->insert([
             "name" =>"good looking",
-            "artist" => "dixon dallas",
+            "artist_id" => "1",//"dixon dallas",
         ]);
         DB::table('songs')->insert([
             "name" =>"europapa",
-            "artist" => "joost klein",
+            "artist_id" => "2",//""joost klein",
         ]);
         DB::table('songs')->insert([
             "name" =>"Sunshine, Rainbow, White pony",
-            "artist" => "大張偉Wowkie Zhang",
+            "artist_id" => "3",//""大張偉Wowkie Zhang",
         ]);
         DB::table('songs')->insert([
             "name" =>"super idol",
-            "artist" => "dissy",
+            "artist_id" => "4",//""dissy",
         ]);
         DB::table('songs')->insert([
             "name" =>"mr boombastic",
-            "artist" => "biggie cheese",
+            "artist_id" => "5",//""biggie cheese",
         ]);
+        DB::table('songs')->insert([
+            "name" =>"fighting the pain",
+            "artist_id" => "6",//""4ever",
+        ]);
+        DB::table('songs')->insert([
+            "name" =>"acid",
+            "artist_id" => "6",//""4ever",
+        ]);
+        DB::table('songs')->insert([
+            "name" =>"nebula",
+            "artist_id" => "6",//""4ever",
+        ]);
+        DB::table('songs')->insert([
+            "name" =>"NOVA",
+            "artist_id" => "6",//""4ever",
+        ]);
+        DB::table('songs')->insert([
+            "name" =>"the end of the line",
+            "artist_id" => "7",//""the stupendium",
+        ]);
+        
     }
 }

@@ -13,8 +13,25 @@ class ArtistSeeder extends Seeder
     public function run(): void
     {
         DB::table('artists')->insert([
-            'name' => "drake",
+            'name' => "dixon dallas",
         ]);
-
+        DB::table('artists')->insert([
+            'name' => "joost klein",
+        ]);
+        DB::table('artists')->insert([
+            'name' => "大張偉Wowkie Zhang",
+        ]);
+        DB::table('artists')->insert([
+            'name' => "dissy",
+        ]);
+        DB::table('artists')->insert([
+            'name' => "biggie cheese",
+        ]);
+        DB::table('artists')->insert([
+            'name' => "4ever",
+        ]);
+        DB::table('artists')->insert([
+            'name' => "the stupendium",
+        ]);
     }
 }
